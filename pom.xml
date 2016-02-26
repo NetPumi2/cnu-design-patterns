@@ -11,6 +11,7 @@
     <module>adapter</module>
     <module>builder</module>
     <module>decorator</module>
+    <module>facade</module>
     <module>proxy</module>
     <module>singleton</module>
     <module>template</module>
