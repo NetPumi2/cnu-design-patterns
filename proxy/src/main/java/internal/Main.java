@@ -1,7 +1,5 @@
 package internal;
 
-import external.EmailValidator;
-
 /**
  * Created by crhonek on 26.2.2016.
  */
