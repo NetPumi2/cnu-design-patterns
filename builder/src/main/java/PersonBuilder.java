@@ -29,6 +29,11 @@ public class PersonBuilder {
         return this;
     }
 
+    public PersonBuilder czechPerson(){
+        person.setCountry("Czech");
+        return this;
+    }
+
     public Person build(){
         return person;
     }

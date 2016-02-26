@@ -12,7 +12,7 @@ import java.util.zip.GZIPInputStream;
 public class Main {
 
 	public static void main(String[] args) throws IOException {
-		InputStream is = Main.class.getResourceAsStream("text.gz");
+		InputStream is = Main.class.getResourceAsStream("/text.gz");
 		BufferedInputStream bis = new BufferedInputStream(is);
 		GZIPInputStream gis = new GZIPInputStream(bis);
 

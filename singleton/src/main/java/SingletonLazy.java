@@ -4,10 +4,15 @@
 public class SingletonLazy {
 
     private static SingletonLazy INSTANCE;
+    private static Object lock = new Object();
 
     public static SingletonLazy getInstance(){
         if(INSTANCE == null){
-            INSTANCE = new SingletonLazy();
+            synchronized (lock) {
+                if(INSTANCE == null) {
+                    INSTANCE = new SingletonLazy();
+                }
+            }
         }
         return INSTANCE;
     }

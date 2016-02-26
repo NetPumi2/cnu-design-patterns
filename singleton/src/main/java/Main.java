@@ -6,11 +6,13 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Starting the application");
 
-        SingletonEager singletonEager = SingletonEager.getInstance();
-        singletonEager.doSomething();
+        SingletonEager singletonEager1 = SingletonEager.getInstance();
+        SingletonEager singletonEager2 = SingletonEager.getInstance();
+        System.out.println(singletonEager1 == singletonEager2);
 
-        SingletonLazy singletonLazy = SingletonLazy.getInstance();
-        singletonLazy.doSomething();
+        FactoryMethod factoryMethod1 = FactoryMethod.getInstance();
+        FactoryMethod factoryMethod2 = FactoryMethod.getInstance();
+        System.out.println(factoryMethod1 == factoryMethod2);
 
         System.out.println("Stopping the application");
     }

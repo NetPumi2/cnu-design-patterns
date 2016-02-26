@@ -15,7 +15,7 @@ public class EmailValidatorLoggingProxy implements IEmailValidator {
 
     @Override
     public boolean isEmailAddressValid(String emailAddress) {
-        System.out.println("Staring the validation of ip address");
+        System.out.println("Staring the validation of email address");
 
         long start = System.nanoTime();
         boolean res = emailValidator.isEmailAddressValid(emailAddress);
