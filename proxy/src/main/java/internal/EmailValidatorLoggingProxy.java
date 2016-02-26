@@ -1,6 +1,5 @@
 package internal;
 
-import external.EmailValidator;
 import external.IEmailValidator;
 
 /**
@@ -8,7 +7,11 @@ import external.IEmailValidator;
  */
 public class EmailValidatorLoggingProxy implements IEmailValidator {
 
-    private IEmailValidator emailValidator = new EmailValidator();
+    private final IEmailValidator emailValidator;
+
+    public EmailValidatorLoggingProxy(IEmailValidator emailValidator) {
+        this.emailValidator = emailValidator;
+    }
 
     @Override
     public boolean isEmailAddressValid(String emailAddress) {
